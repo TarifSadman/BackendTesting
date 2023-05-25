@@ -1,0 +1,27 @@
+{
+  "name": "testpurpose",
+  "version": "1.0.0",
+  "description": "nothing",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TarifSadman/BackendTesting.git"
+  },
+  "keywords": [
+    "node",
+    "backend"
+  ],
+  "author": "Tarif Sadman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TarifSadman/BackendTesting/issues"
+  },
+  "homepage": "https://github.com/TarifSadman/BackendTesting#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,22 +1,28 @@
-//server creation
+// //server creation
 
-//1. http module
-
-
-const http = require('http');
+// //1. http module
 
 const hostname = 'localhost';
 const port = 7000;
 
+const http = require('http');
+const fs = require('fs');
+
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
+  console.log('request made');
+
   res.setHeader('Content-Type', 'text/html');
-  res.write('<h1>Starting Backend</h1>');
-  res.write('<h2>Hello World</h2>');
-  res.write('<h4>....</h4>');
-  res.end();
-//   console.log(req.method);
-  console.log(req.url);
+  fs.readFile('./views/index.html', (err, fileData) => {
+        if (err) {
+          console.log(err);
+        }
+        else {
+          res.write(fileData);
+          res.end();
+        }
+      console.log(req.url);
+    })
+
 });
 
 server.listen(port, hostname, () => {
